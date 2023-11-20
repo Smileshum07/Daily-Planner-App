@@ -26,8 +26,8 @@ header {
 }
 
 .time-block {
-  text-align: center;
-  border-radius: 15px;
+  width: 80%;
+  
 }
 
 .row {
@@ -48,23 +48,19 @@ header {
   padding-top: 10px;  
 }
 
-.middle-col {
-  width: 80%;
-}
-
 .past {
+  width: 80%;
   background-color: #d3d3d3;
-  color: white;
 }
 
 .present {
+  width: 80%;
   background-color: #ff6961;
-  color: white;
 }
 
 .future {
+  width: 80%;
   background-color: #77dd77;
-  color: white;
 }
 
 .saveBtn {
