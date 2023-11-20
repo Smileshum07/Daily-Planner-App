@@ -13,27 +13,18 @@ currentDay.textContent = dayjs().format('dddd,  D MMMM  YYYY');
 
 // Define the past, present and future
 function getRightTime() {
-    hour.forEach(element => {
+    
+ for (var i = 0; i < timeBlock.length; i++) {
         
-        if (element.innerText === currentTime) {
-            timeBlock[i].setAttribute('class', 'present');
-        } else if (element.innerText < currentTime) {
+     if (hour[i].innerText === currentTime) {
+           timeBlock[i].setAttribute('class', 'present');
+        } else
+            if (hour[i].innerText > currentTime) {
             timeBlock[i].setAttribute('class', 'past');
-        } else {
+       } else {
             timeBlock[i].setAttribute('class', 'future');
         }; 
-    });
-    // for (var i = 0; i < timeBlock.length; i++) {
-        
-    //     if (hour[i].innerText === currentTime) {
-    //         timeBlock[i].setAttribute('class', 'present');
-    //     } else
-    //         if (hour[i].innerText > currentTime) {
-    //         timeBlock[i].setAttribute('class', 'past');
-    //     } else {
-    //         timeBlock[i].setAttribute('class', 'future');
-    //     }; 
-    // }
+     }
 };
 
 getRightTime(); 
