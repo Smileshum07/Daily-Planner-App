@@ -3,10 +3,12 @@ var currentDay = document.getElementById('currentDay');
 var currentTime = Number(dayjs().format('HH'));
 var hour = document.querySelectorAll('.hour');
 var timeBlock = document.querySelectorAll('.time-block');
+var saveButton = document.querySelectorAll('button');
+
 // console.log(hour[7].innerText);
-console.log(timeBlock);
-//currentTime = 18;
-console.log(typeof(currentTime));
+
+// currentTime = 18;
+// console.log(typeof(currentTime));
 
 // Display current date and time
 currentDay.textContent = dayjs().format('dddd,  D MMMM  YYYY');
@@ -39,9 +41,17 @@ function getRightColor() {
 
 getRightColor(); 
 
+
+
 // Save the note
-function getNote() {
+function getTextArea() {
+    for (var i = 0; i < timeBlock.length; i++) {
+        var note = timeBlock[i].value;
+        timeBlock[i].textContent = note;
+        console.log(note);
+    }
     
 };
-getNote();
 
+timeBlock.addEventListener('change', getTextArea);
+console.log(localStorage);

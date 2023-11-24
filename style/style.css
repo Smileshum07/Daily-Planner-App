@@ -72,6 +72,6 @@ header {
   color: white;
 }
 
-.saveBtn img:hover, .hour:hover {
+.saveBtn img:active, .hour:active {
   padding-right: 5px;
 }
