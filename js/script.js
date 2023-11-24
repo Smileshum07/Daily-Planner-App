@@ -41,19 +41,24 @@ function getRightColor() {
 
 getRightColor(); 
 
-
-
 // Save the note
-function getTextArea(){
-for (var i = 0; i < timeBlock.length; i++){
-    timeBlock[i].addEventListener('change', getTextArea(){
+function getSave(e) {
+    e.preventDefault();
+    for (var i = 0; i < saveButton.length; i++) {
         var note = timeBlock[i].value;
-        timeBlock[i].textContent = note;
-        console.log(note);
-    });
+        if (note !== '') {
+            localStorage.setItem('note', note);
+            var listNotes = document.createElement('p');
+            listNotes.textContent = localStorage.getItem('note');
+            timeBlock.appendChild(listNotes);
+            console.log(note);
+        };
+        
+    };
 };
-}; 
 
-getTextArea();
 
-console.log(localStorage);
+for (var i = 0; i < saveButton.length; i++){
+    saveButton[i].addEventListener('click', getSave); 
+};
+console.log(localStorage)
