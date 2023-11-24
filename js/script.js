@@ -44,14 +44,16 @@ getRightColor();
 
 
 // Save the note
-function getTextArea() {
-    for (var i = 0; i < timeBlock.length; i++) {
+function getTextArea(){
+for (var i = 0; i < timeBlock.length; i++){
+    timeBlock[i].addEventListener('change', getTextArea(){
         var note = timeBlock[i].value;
         timeBlock[i].textContent = note;
         console.log(note);
-    }
-    
+    });
 };
+}; 
 
-timeBlock.addEventListener('change', getTextArea);
+getTextArea();
+
 console.log(localStorage);
