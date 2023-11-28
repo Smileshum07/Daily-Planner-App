@@ -32,7 +32,7 @@ header {
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
+  height: 85px;
   border-top: 1px solid white;
 }
 
@@ -49,33 +49,44 @@ header {
 }
 
 .past {
-  width: 80%;
+  width: 85%;
   background-color: #d3d3d3;
 }
 
 .present {
-  width: 80%;
+  width: 85%;
   background-color: #ff6961;
 }
 
 .future {
-  width: 80%;
+  width: 85%;
   background-color: #77dd77;
 }
 
 .saveBtn {
-  width: 10%;
+  width: 5%;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
   background-image: url('./save-icon.png');
-  background-size: 35px;
+  background-size: 25px;
   background-repeat: no-repeat;
-  padding: 20px;
+  background-position: center;
 }
 
-.saveBtn img:active, .hour:active {
- 
+.saveBtn:hover {
+  -webkit-box-shadow: -11px 14px 20px -1px rgba(87, 89, 109, 1);
+    -moz-box-shadow: -11px 14px 20px -1px rgba(87, 89, 109, 1);
+    box-shadow: -11px 14px 20px -1px rgba(87, 89, 109, 1);
+    color: var(--hover-color);
+    background-color: rgb(113, 151, 233);
+}
+
+.hour:hover {
+  -webkit-box-shadow: -11px 14px 20px -1px rgba(87, 89, 109, 1);
+    -moz-box-shadow: -11px 14px 20px -1px rgba(87, 89, 109, 1);
+    box-shadow: -11px 14px 20px -1px rgba(87, 89, 109, 1);
+    color: var(--hover-color);
 }
