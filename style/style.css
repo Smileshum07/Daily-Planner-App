@@ -70,8 +70,12 @@ header {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  background-image: url('./save-icon.png');
+  background-size: 35px;
+  background-repeat: no-repeat;
+  padding: 20px;
 }
 
 .saveBtn img:active, .hour:active {
-  padding-right: 5px;
+ 
 }

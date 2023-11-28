@@ -41,24 +41,26 @@ function getRightColor() {
 
 getRightColor(); 
 
-// Save the note
-function getSave(e) {
-    e.preventDefault();
-    for (var i = 0; i < saveButton.length; i++) {
-        var note = timeBlock[i].value;
-        if (note !== '') {
-            localStorage.setItem('note', note);
-            var listNotes = document.createElement('p');
-            listNotes.textContent = localStorage.getItem('note');
-            timeBlock.appendChild(listNotes);
-            console.log(note);
-        };
-        
+// Get save the note
+function getSaveNote(e) {
+    var btnId = e.target.id.slice(4);
+    console.log(btnId);  // Get ID of Clicked btn
+    for (var i = 0; i < timeBlock.length; i++) {
+        var timeBlockId = timeBlock[i].getAttribute('id').slice(5); // Get id of timeBlock
+        var noteValue = timeBlock[i].value;
+        console.log(noteValue);
+        // Find in which time block to add the note
+        if (btnId == timeBlockId) {
+        localStorage.setItem('note', noteValue);
+        var note = document.createElement('p');
+        note.textContent = localStorage.getItem('note');
+        timeBlock[i].appendChild(note);
+    }
     };
+   
 };
 
-
-for (var i = 0; i < saveButton.length; i++){
-    saveButton[i].addEventListener('click', getSave); 
-};
-console.log(localStorage)
+// Add event listener to the buttons
+for (var button of saveButton) {
+  button.addEventListener("click", getSaveNote);
+}
